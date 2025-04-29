@@ -33,7 +33,7 @@ This repository contains a **Dockerized** portfolio web application built with *
 
 1. Clone the repository and navigate into it:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/xxxjojo12/portfolio.git>
    cd portfolio
 2. Build and start the services with Docker Compose:
    docker-compose up --build
