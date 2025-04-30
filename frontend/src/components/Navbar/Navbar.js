@@ -2,28 +2,34 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+function Navbar({ setShowContact }) {
   return (
     <nav className="navbar">
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <img
-          src={menuOpen ? '/close-icon.png' : '/menu-icon.png'}
-          alt="menu toggle"
-          className="menu-icon"
-        />
-      </div>
-      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-        <li><Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
-        <li><Link to="/experience" onClick={() => setMenuOpen(false)}>Experience</Link></li>
-        <li><Link to="/skills" onClick={() => setMenuOpen(false)}>Skills</Link></li>
-        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
-        <li><Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link></li>
+      <ul className="nav-links">
+        <div className="nav-left">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/experience">Experience</Link></li>
+          <li><Link to="/skills">Skills</Link></li>
+          <li><Link to="/resume">Resume</Link></li>
+        </div>
+        <div className="nav-right">
+          <li>
+            <button
+              onClick={() => {
+                setShowContact(true);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="contact-button"
+            >
+              Contact me
+            </button>
+          </li>
+        </div>
       </ul>
     </nav>
   );
 }
+
 
 export default Navbar;

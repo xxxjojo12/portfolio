@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './About.css';
 
 function About() {
+  const [showContact, setShowContact] = useState(false);
+  const contactRef = useRef(null);
+
   return (
     <section id="about" className="about-container">
       <div className="about-image">
