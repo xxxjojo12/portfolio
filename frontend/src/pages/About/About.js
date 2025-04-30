@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about" className="about-container">
       <div className="about-image">
-        <img src="/main_image.jpeg" alt="Profile" />
+        <img src="/main_image.jpeg" alt="Profile" className="hover-scale" />
       </div>
       <div className="about-text">
         <h2>About Me</h2>

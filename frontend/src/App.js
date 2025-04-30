@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import About from './components/About';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
+import About from './pages/About/About';
+import Projects from './pages/Projects/Projects';
+import Experience from './pages/Experience/Experience';
+import Skills from './pages/Skills/Skills';
+import Contact from './pages/Contact/Contact';
+import Resume from './pages/Resume/Resume';
 
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </Router>
     </div>

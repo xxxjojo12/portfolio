@@ -20,16 +20,7 @@ function Navbar() {
         <li><Link to="/experience" onClick={() => setMenuOpen(false)}>Experience</Link></li>
         <li><Link to="/skills" onClick={() => setMenuOpen(false)}>Skills</Link></li>
         <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
-        <li>
-            <a
-                href="/Hail_Lim_Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => setMenuOpen(false)}
-            >
-            Resume
-            </a>
-        </li>
+        <li><Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link></li>
       </ul>
     </nav>
   );
